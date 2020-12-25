@@ -13,3 +13,7 @@ func main() {
 	)
 	println(sun, mon, tue) // 0 1 2
 }
+
+
+
+
