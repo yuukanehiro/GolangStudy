@@ -3,7 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("hello world")
+	var massage = "hello world"
+	fmt.Println(massage)
 }
 
 
