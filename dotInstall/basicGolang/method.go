@@ -8,15 +8,15 @@ type user struct {
 }
 
 func (u user) show() {
-	fmt.Printf("name:%s, socre:%d\n", u.name, u.score)
+	fmt.Printf("name:%s, score:%d\n", u.name, u.score)
 }
 
-func (u user) scoreUp() {
+func (u *user) scoreUp() {
 	u.score++
 }
 
 func main() {
-	userInstance := user{"tanaka", 100}
+	userInstance := user{name:"tanaka", score:100}
 	userInstance.scoreUp()
-	userInstance.show() // name:tanaka, socre:100
+	userInstance.show() // name:tanaka, score:101
 }
