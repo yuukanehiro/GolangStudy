@@ -3,12 +3,20 @@ package main
 import "fmt"
 
 func show(t interface{}) {
-	// 型アサーション
-	_, ok := t.(japanese)
-	if ok {
-		fmt.Println("日本人じゃぞ！")
-	} else {
-		fmt.Println("外国人じゃぞ！")
+	// // 型アサーション
+	// _, ok := t.(japanese)
+	// if ok {
+	// 	fmt.Println("日本人じゃぞ！")
+	// } else {
+	// 	fmt.Println("外国人じゃぞ！")
+	// }
+
+	// 型Switch
+	switch t.(type) {
+		case japanese:
+			fmt.Println("日本人じゃぞ！")
+		case american:
+			fmt.Println("外国人じゃぞ！")
 	}
 }
 
