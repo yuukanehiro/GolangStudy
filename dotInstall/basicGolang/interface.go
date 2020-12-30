@@ -20,6 +20,10 @@ func show(t interface{}) {
     // }
 }
 
+type greeter interface {
+	greet()
+}
+
 type japanese struct {}
 type american struct {}
 
@@ -31,9 +35,6 @@ func (a american) greet() {
 	fmt.Println("Hello!")
 }
 
-type greeter interface {
-	greet()
-}
 
 func main() {
 	greeters := []greeter{japanese{}, american{}}
